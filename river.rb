@@ -15,5 +15,15 @@ class River
     @fish_count.pop()
   end
 
+  def fish_counter(item)
+    for fish in @fish_count
+      if fish.fish_count == item
+        fill_river(fish)
+      elsif fish.eat_fish == item
+        fish_eaten()
+      end
+    end
+    @fish_count.count(fish)
+  end
 
 end
